@@ -1,0 +1,21 @@
+
+<sly data-sly-use.articleModel="com.keerthi.newsportal.core.models.ArticleDetailsModel"/>
+
+<div data-sly-test="${!articleModel.isArticleIsExpired}">
+<h1>${articleModel.articleTitle @context='html'}</h1>
+<div>${articleModel.articleDesc}</div>
+<img data-sly-test="${articleModel.articleImage}" src="${articleModel.articleImage}"/>
+
+<div>
+     <h3>Related Articles</h3>
+        <ul>
+            <sly data-sly-list.article="${articleModel.relatedArticles}">
+                <li>
+                 <a href="${article.relatedArticlePath @ extension='html'}" title="${article.relatedArticleTitle}">
+                        ${article.relatedArticleTitle}
+                    </a>
+                </li>
+            </sly>
+        </ul>
+ </div>
+</div>
