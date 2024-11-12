@@ -6,7 +6,7 @@
         <div class="b-logo">
           <a
             href="${properties.logoLink}.html"
-            target="${properties.openInNewTab?'_blank':''}"
+            target="${properties.openInNewTab ? '_blank' : ''}"
           >
             <img
               src="${properties.logoImage}"
@@ -17,14 +17,20 @@
       </div>
       <div class="col-lg-6 col-md-4">
         <div class="b-ads">
-          <a href="https://htmlcodex.com">
-            <img src="/content/dam/newscenter/ads-1.jpg" alt="Ads" />
+          <a href="${properties.adsLink}">
+            <img
+              data-sly-attribute.src="${properties.adsImage}"
+              data-sly-attribute.alt="${properties.adsAltText}"
+            />
           </a>
         </div>
       </div>
       <div class="col-lg-3 col-md-4">
         <div class="b-search">
-          <input type="text" placeholder="Search" />
+          <input
+            type="text"
+            placeholder="${properties.searchPlaceholder @ context='text'}"
+          />
           <button><i class="fa fa-search"></i></button>
         </div>
       </div>
