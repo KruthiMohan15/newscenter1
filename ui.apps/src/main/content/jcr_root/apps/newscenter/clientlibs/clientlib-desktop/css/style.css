@@ -1390,7 +1390,9 @@ button.btn:hover {
     padding-bottom:60px;
 }
 
-
+.cmp-link__screen-reader-only {
+    display: none;
+}
 
 
 
